@@ -1,7 +1,7 @@
 export interface User {
   token: string;
   name?: string;
-  role?: 'user' | 'organizer'; // Add role
+  role?: 'user' | 'organizer'; 
 }
 
 export interface Event {

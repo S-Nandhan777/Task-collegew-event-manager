@@ -18,16 +18,16 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-  <Route path="/" element={<Home />} />
-  <Route path="/register" element={<Register />} />
-  <Route path="/login" element={<Login />} />
-  <Route path="/organizer-dashboard" element={<OrganizerDashboard />} />
-  <Route path="/event/:id" element={<EventDetails />} />
-  <Route path="/profile" element={<Profile />} />
-  <Route element={<ProtectedRoute requiredRole="organizer" />}>
-    <Route path="/dashboard" element={<Dashboard />} />
-  </Route>
-</Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/organizer-dashboard" element={<OrganizerDashboard />} />
+          <Route path="/event/:id" element={<EventDetails />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route element={<ProtectedRoute requiredRole="organizer" />}>
+            <Route path="/dashboard" element={<Dashboard />} />
+          </Route>
+        </Routes>
         <ToastContainer />
       </Router>
     </AuthProvider>

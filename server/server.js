@@ -18,7 +18,7 @@ app.use(express.json());
 
 app.use('/api/users', userRoutes);
 app.use('/api/events', eventRoutes);
-app.use('/api/registrations', registrationRoutes); // Add this
+app.use('/api/registrations', registrationRoutes); 
 app.use('/api/reminders', reminderRoutes);
 app.use('/api/reviews', reviewRoutes);
 app.use('/api/photos', photoRoutes);
