@@ -14,6 +14,8 @@ export default function Home() {
   const [filters, setFilters] = useState<number[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
   const { user } = useAuth();
+  // console.log(user);
+  
 
   useEffect(() => {
     fetchEvents();

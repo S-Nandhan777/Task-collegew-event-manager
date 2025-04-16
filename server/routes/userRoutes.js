@@ -11,7 +11,7 @@ const { register, login, getMe,getUserDetails } = require('../controllers/userCo
 
 router.post('/register', register);
 router.post('/login', login);
-router.get('/me', authenticateToken, getMe);
+// router.get('/me', authenticateToken, getMe);
 router.get('/me', authenticateToken, getUserDetails);
 
 

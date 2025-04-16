@@ -44,6 +44,10 @@ async function loginOrganizer(req, res) {
     if (!match) return res.status(401).json({ error: 'Invalid credentials' });
     const token = jwt.sign({ organizerId: organizer.organizer_id, email: organizer.contact_info, role: role }, process.env.JWT_SECRET, { expiresIn: '1h' });
     res.json({ token });
+    console.log(role);
+    console.log(token);
+    
+    
   } catch (error) {
     res.status(500).json({ error: 'Login failed' });
     console.log(error);

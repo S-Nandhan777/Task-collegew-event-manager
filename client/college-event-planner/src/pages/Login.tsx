@@ -24,7 +24,7 @@ export default function Login() {
         const response = await api.post('/organizers/login', { email, password,role });
         login(response.data.token);
         toast.success('Login successful!');
-        navigate('/dashboard');
+        navigate('/organizer-dashboard');
        }
       
     } catch (error: any) {
