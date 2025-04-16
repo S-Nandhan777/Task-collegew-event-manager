@@ -1,0 +1,75 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #1a5096;
+  color: white;
+  position: relative;
+  min-height: 40px;
+  border-radius: 10px; /* Fixed height to prevent resizing */
+}
+
+.navLink {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-size: 1.1rem;
+}
+
+.navLink:hover {
+  color: #3498db;
+}
+
+.authSection {
+  display: flex;
+  align-items: center;
+}
+
+.userName {
+  margin-right: 1rem;
+  color: #ecf0f1;
+}
+
+.logoutButton {
+  padding: 0.5rem 1rem;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.logoutButton:hover {
+  background-color: #c0392b;
+}
+
+.reminderContainer {
+  position: relative;
+}
+
+.reminderIcon {
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  position: relative;
+  z-index: 1001; /* Ensure it stays above dropdown */
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+  .navLink,
+  .authSection {
+    margin: 0.5rem 0;
+  }
+  .authSection {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .reminderIcon {
+    margin-left: 0;
+  }
+}

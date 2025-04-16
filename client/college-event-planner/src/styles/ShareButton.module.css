@@ -1,0 +1,18 @@
+.shareButton {
+  padding: 0.5rem 1rem;
+  background-color: #e67e22;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.shareButton:hover {
+  background-color: #d35400;
+}
+
+@media (max-width: 600px) {
+  .shareButton {
+    width: 100%;
+  }
+}

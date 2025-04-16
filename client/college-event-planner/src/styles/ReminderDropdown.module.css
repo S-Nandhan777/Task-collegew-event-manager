@@ -1,0 +1,57 @@
+.reminderDropdown {
+  position: absolute;
+  top: 60px;
+  right: 1rem;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 1000;
+  width: 300px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #e74c3c;
+}
+
+.reminderItem {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.reminderItem:last-child {
+  border-bottom: none;
+}
+
+.timeInput {
+  width: 100%;
+  padding: 0.25rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.noReminders {
+  text-align: center;
+  color: #7f8c8d;
+  padding: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .reminderDropdown {
+    right: 0;
+    width: 90%;
+    top: 50px;
+  }
+}

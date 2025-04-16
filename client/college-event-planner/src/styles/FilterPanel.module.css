@@ -1,0 +1,22 @@
+.filterPanel {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.filterLabel {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+@media (max-width: 600px) {
+  .filterPanel {
+    padding: 0.5rem;
+  }
+}

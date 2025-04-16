@@ -1,0 +1,72 @@
+.dashboard-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f9faff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.dashboard-container h2 {
+  text-align: center;
+  color: #011c7b;
+  margin-bottom: 25px;
+}
+
+form > div {
+  margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.2s ease-in-out;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #1c3eac;
+  box-shadow: 0 0 0 2px rgba(33, 28, 172, 0.2);
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #1c26ac;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button{
+  width: 100%;
+  padding: 12px;
+  background-color: #ee7346;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 15px;
+}
+
+button[type="submit"]:hover {
+  background-color: #3836df;
+}

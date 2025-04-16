@@ -1,0 +1,27 @@
+.photoGallery {
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.photo {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.noPhotos {
+  text-align: center;
+  color: #7f8c8d;
+}
+
+@media (max-width: 600px) {
+  .photoGallery {
+    grid-template-columns: 1fr;
+  }
+  .photo {
+    max-width: 100%;
+  }
+}
