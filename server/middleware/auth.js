@@ -22,8 +22,9 @@ function authenticateOrganizerToken(req, res, next) {
   });
 }
 
-module.exports = authenticateToken;
 module.exports = authenticateOrganizerToken;
+module.exports = authenticateToken;
+
 
 // const jwt = require('jsonwebtoken');
 

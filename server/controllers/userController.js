@@ -31,6 +31,7 @@ async function login(req, res) {
     res.json({ token });
     console.log(role);
     console.log(token);
+    console.log(`userId : ${user.user_id}`);
     
   } catch (error) {
     res.status(500).json({ error: 'Login failed' });

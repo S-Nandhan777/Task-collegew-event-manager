@@ -26,6 +26,9 @@ export default function EventDetails() {
     fetchEvent();
     checkRegistration();
     fetchReviews();
+    console.log(id);
+    
+
   }, [id, navigate]);
 
   const fetchEvent = async () => {
@@ -49,7 +52,7 @@ export default function EventDetails() {
       const response = await api.get<{ registered: boolean }>(`/registrations/check/${id}`);
       setRegistered(response.data.registered);
     } catch (error: any) {
-      toast.error('Failed to check registration');
+      toast.error(error);
       console.error('Check registration error:', error.response?.status, error.response?.data || error.message);
     } finally {
       setLoading(prev => ({ ...prev, registration: false }));
