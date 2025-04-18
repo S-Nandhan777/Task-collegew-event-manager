@@ -27,11 +27,12 @@ async function login(req, res) {
     const user = rows[0];
     const match = await bcrypt.compare(password, user.password);
     if (!match) return res.status(401).json({ error: 'Invalid credentials' });
-    const token = jwt.sign({ userId: user.user_id, role:role ,name:user.name}, process.env.JWT_SECRET, { expiresIn: '1h' });
-    res.json({ token });
+    const token = jwt.sign({ userId: user.user_id, role: role, name: user.name }, process.env.JWT_SECRET, { expiresIn: '1h' });
     console.log(role);
     console.log(token);
     console.log(`userId : ${user.user_id}`);
+    res.json({ token });
+   
     
   } catch (error) {
     res.status(500).json({ error: 'Login failed' });

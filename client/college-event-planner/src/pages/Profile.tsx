@@ -20,6 +20,8 @@ export default function Profile() {
       setEvents(response.data);
     } catch (error) {
       toast.error('Failed to load events');
+      console.log(error);
+      
     }
   };
 

@@ -1,0 +1,5 @@
+{ 
+"env": { 
+  "JWT_SECRET": "9kP2mN8qX5vL1jR4yT7uZ3wE6oI9aS0dF2hG5jK8mL3pQ1rT4vY7uZ9"
+  }
+}

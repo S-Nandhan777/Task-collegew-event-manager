@@ -5,16 +5,20 @@ import { useEffect, useState } from 'react';
 import api from '../services/api';
 import { toast } from 'react-toastify';
 
-interface events {
-  event_id:number,
-  title: string,
-  date: string,
-  time:string,
-  location: string,
-  description: string,
-  organizer_id: number
-  organizer_name:string
-}
+
+type EventListProps = {
+  events: Event[];
+};
+// interface events {
+//   event_id:number,
+//   title: string,
+//   date: string,
+//   time:string,
+//   location: string,
+//   description: string,
+//   organizer_id: number
+//   organizer_name:string
+// }
 
 // {
 //   "event_id": 1,
@@ -27,9 +31,9 @@ interface events {
 //   "organizer_name": "Tech Club"
 // }
 
-export default function EventList() {
+export default function EventList ({ events }: EventListProps) {
   const [filters, setFilters] = useState([]);
-  const [event, setEvents] = useState<events[]>([]);
+  const [event, setEvents] = useState<Event[]>([]);
 
   useEffect(() => {
     fetchEvents();

@@ -1,5 +1,5 @@
 const pool = require('../config/db');
-
+const {  getUserEvents } = require('../models/registrationModel');
 async function checkRegistration(req, res) {
   
   try {
@@ -50,4 +50,15 @@ async function cancelRegistration(req, res) {
   }
 }
 
-module.exports = { checkRegistration, registerForEvent, cancelRegistration };
+async function getMyEvents(req, res) {
+  try {
+      const userId = req.user.userId;
+      const events = await getUserEvents(userId);
+      res.json(events);
+  } catch (error) {
+    console.log(error);
+      res.status(500).json({ error: 'Failed to fetch events' });
+  }
+}
+
+module.exports = { checkRegistration, registerForEvent, cancelRegistration,getMyEvents };
