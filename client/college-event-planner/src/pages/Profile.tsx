@@ -2,9 +2,8 @@ import { useEffect, useState } from 'react';
 import api from '../services/api';
 import { toast } from 'react-toastify';
 import { Event } from '../types';
-import RegistrationForm from '../components/RegistrationForm';
-import LoginForm from '../components/LoginForm';
 import styles from '../styles/MyEvents.module.css';
+import Login from './Login';
 
 export default function Profile() {
   const [events, setEvents] = useState<Event[]>([]);
@@ -45,8 +44,7 @@ export default function Profile() {
         </>
       ) : (
         <>
-          <LoginForm />
-          <RegistrationForm />
+          <Login/>
         </>
       )}
     </div>
